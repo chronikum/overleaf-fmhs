@@ -9,6 +9,10 @@ RUN tlmgr option repository https://ftp.math.utah.edu/pub/tex/historic/systems/t
         collection-latexextra \
         collection-latexrecommended
 
-RUN tlmgr install dirtree
+RUN tlmgr install \
+        algorithmicx \
+        algorithms \
+        dirtree \
+        struktex
 
 ENV PATH="/usr/local/texlive/2025/bin/x86_64-linux:${PATH}"

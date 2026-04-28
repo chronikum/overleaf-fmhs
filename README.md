@@ -2,7 +2,7 @@
 
 This workspace contains a standalone Docker Compose setup for Overleaf Extended Community Edition. It builds a small local image from `overleafcep/sharelatex:6.1.2-ext-v4.1`, which includes the Extended CE feature bundle such as reference-key autocomplete, the symbol palette, template gallery, comments/track changes, and external URL import.
 
-The local image also installs broad TeX Live collections for common academic documents: recommended LaTeX packages, LaTeX extras, BibLaTeX/BibTeX extras with `biber`, recommended fonts, and German language support. It also installs `dirtree`, which is useful for directory-tree diagrams but is not pulled in by those collections. This covers classes and packages such as `scrartcl`, `ngerman`, `csquotes`, `biblatex`, and `dirtree` without turning every missing package into a one-off Dockerfile edit.
+The local image also installs broad TeX Live collections for common academic documents: recommended LaTeX packages, LaTeX extras, BibLaTeX/BibTeX extras with `biber`, recommended fonts, and German language support. It also installs `algorithmicx`, `algorithms`, `dirtree`, and `struktex`, useful for algorithm floats, pseudocode, directory-tree diagrams, and structured diagrams, because they are not pulled in by those collections. This covers classes and packages such as `scrartcl`, `ngerman`, `csquotes`, `biblatex`, `algorithm`, `algpseudocode`, `dirtree`, and `struktex` without turning every missing package into a one-off Dockerfile edit.
 
 Sandboxed compiles are disabled by default, and the Docker socket is not mounted.
 
