@@ -1,4 +1,4 @@
-# Overleaf Extended CE
+# Overleaf - Full Managed Hosted ShareLaTeX (overleaf-fmhs)
 
 This workspace contains a standalone Docker Compose setup for Overleaf Extended Community Edition. It builds a small local image from `overleafcep/sharelatex:6.1.2-ext-v4.1`, which includes the Extended CE feature bundle such as reference-key autocomplete, the symbol palette, template gallery, comments/track changes, and external URL import.
 
