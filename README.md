@@ -6,7 +6,7 @@ The local image also installs broad TeX Live collections for common academic doc
 
 Sandboxed compiles are disabled by default, and the Docker socket is not mounted.
 
-MongoDB is pinned to `mongo:8.0` because this Overleaf Extended CE release requires MongoDB 8 or newer.
+MongoDB is pinned to `mongo:8.0.20` because this Overleaf Extended CE release requires MongoDB 8 or newer. 8.0.21+ refuses to start on any kernel reporting 6.19–7.0.13 ([SERVER-121912](https://jira.mongodb.org/browse/SERVER-121912)), including Ubuntu 26.04's `7.0.0-N` kernels that already carry the upstream 7.0.14 fix. Check the real upstream version with `cat /proc/version_signature`; only use this pin on a kernel that is genuinely 7.0.14+ (or below 6.19). Move back to `mongo:8.0` once the host kernel reports 7.0.14+ in `uname -r`.
 
 The pinned Extended CE image is published for `linux/amd64`. The Compose file sets that platform explicitly, which works natively on amd64 servers and under Docker Desktop emulation on Apple Silicon.
 
